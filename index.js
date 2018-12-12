@@ -54,7 +54,14 @@ const OVERLAP_NUM = 2;
 //连续相邻数字个数
 const UNINTERRUPTED_NEIGHBOUR_NUM_COUNT = 4;
 
+//号码前缀不参与选择字符串类型
+const PREFIX = "5660";
 
+//开始号码
+const START_NUM = 4000;
+
+//结束号码
+const END_NUM = 9999;
 
 const selectMobileNum=(prefix,startNum,endNum)=>{
   let array = [];
@@ -106,7 +113,7 @@ const selectMobileNum=(prefix,startNum,endNum)=>{
   return result
 }
 
-let nums = selectMobileNum("5660",4000,9999)
+let nums = selectMobileNum(PREFIX,START_NUM,END_NUM)
 let xmsxData = [];
 xmsxData.push(["序号","号码"])
 nums.forEach((item,index)=>{
